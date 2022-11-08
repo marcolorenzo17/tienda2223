@@ -7,6 +7,15 @@
     <title>Listado de artículos</title>
 </head>
 <body>
-    Listado de artículos
+    <?php
+    require '../comun/auxiliar.php';
+    $pdo = conectar();
+    $sent = $pdo->query("SELECT * FROM articulos ORDER BY codigo");
+    ?>
+    <table>
+        <thead>
+            <th>Código</th>
+        </thead>
+    </table>
 </body>
 </html>
